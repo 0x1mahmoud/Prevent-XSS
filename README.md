@@ -75,3 +75,7 @@ if( array_key_exists( "name", $_GET ) && $_GET[ 'name' ] != NULL ) {
     echo '<pre> ' . filter_var($_GET[ 'name' ], FILTER_SANITIZE_STRING) . '</pre>';
 ```
 as you can see i added **FILTER_SANITIZE_STRING** so let's try to put my xss payload
+
+![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss4.png)
+
+as you can see it's blocking the tags "<" so if you type "script" it will print it but if you type <script> it will block it so as you can see it's blocking `**<script>**` and `**</script>**` and print **"alert(1)"**
