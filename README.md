@@ -51,6 +51,27 @@ so let's open my apache2 sevrer by **service apache2 start** and i'll type http:
 
 ![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss.png)
 
-### so here we go let's move to the next step
+### so here we go let's move to the next step i'll type "Hello"
 
 ![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss1.png)
+
+### and it's printing "Hello"
+### let's type a html code like this `"<h1>Mahmoud</h1>"`
+
+![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss2.png)
+
+#### so let's move forward to the next step i'll type a javascript payload "xss payload" the most popular one is `<script>alert(1)</script>`
+
+![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss3.png)
+
+now it's alert **1** now we can steal cookies and doing more and more...
+
+now the parameter "?name=" is vulneravle with xss now how to fix this so i'm not gonna to explain how to block by WAF or rejecting and blocking special character i'm just using the the php filtering the advanced one so let's use **FILTER_SANITIZE_STRING** and i'll update the code
+
+```
+// Is there any input?
+if( array_key_exists( "name", $_GET ) && $_GET[ 'name' ] != NULL ) {
+    // Feedback for end user
+    echo '<pre> ' . filter_var($_GET[ 'name' ], FILTER_SANITIZE_STRING) . '</pre>';
+```
+as you can see i added **FILTER_SANITIZE_STRING** so let's try to put my xss payload
