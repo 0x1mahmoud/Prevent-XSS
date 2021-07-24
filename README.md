@@ -4,7 +4,6 @@
 
 <h3>the code will be<h3>
 
-
 ```
 <?php
 
@@ -50,3 +49,4 @@ if( array_key_exists( "name", $_GET ) && $_GET[ 'name' ] != NULL ) {
 ```
 so let's open my apache2 sevrer by **service apache2 start** and i'll type http://localhost/xss.php
 
+![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss.png)
