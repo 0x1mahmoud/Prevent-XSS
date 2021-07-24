@@ -1,8 +1,8 @@
 # How to Prevent XSS by PHP Filtering
 
-<h3>Oki i'll write a php code it will be "xss.php" i'll create input and with no filter<h3>
+## Oki i'll write a php code it will be "xss.php" i'll create input and with no filter
 
-<h3>the code will be<h3>
+### the code will be
 
 ```
 <?php
@@ -50,3 +50,7 @@ if( array_key_exists( "name", $_GET ) && $_GET[ 'name' ] != NULL ) {
 so let's open my apache2 sevrer by **service apache2 start** and i'll type http://localhost/xss.php
 
 ![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss.png)
+
+### so here we go let's move to the next step
+
+![Image of mahmoudashraf1344](https://github.com/mahmoudashraf1344/PreventXSS/blob/main/xss1.png)
