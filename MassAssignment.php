@@ -1,8 +1,3 @@
-Route::any('/profile', function (Request $request) {
-    $request->user()->forceFill($request->all())->save();
+use App\Models\User;
 
-    $user = $request->user()->fresh();
-
-    return response()->json(compact('user'));
-})->middleware('auth');
-
+User::where('email', $email)->get();
